@@ -1,0 +1,97 @@
+#contacts {
+  width: 278px;
+  margin: 0 auto;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #fff;
+  border-radius: 10px;
+  padding: 1px;
+  background: linear-gradient(#4d4d4d, #252525);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+#contacts > div {
+  width: 278px;
+  background-color: #131313;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+#contacts h1 {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 18px;
+  margin: 0;
+  background: linear-gradient(#3e3e3e, #252525 );
+}
+
+#contacts div.contact {
+  margin: 2px 0;
+}
+
+#contacts div.contact:nth-child(even) {
+  background-color: rgba(33, 33, 33, 1);
+  overflow: auto;
+}
+
+#contacts div.contact:nth-child(odd) {
+  background-color: rgba(33, 33, 33, 0.5);
+  overflow: auto;
+}
+
+#contacts div.contact p {
+  margin: 0;
+  padding: 10px 16px;
+  font-size: 12px;
+}
+
+#contacts div.contact p.name {
+  width: 76px;
+  border-right: 1px solid #131313;
+}
+
+#contacts div.contact p.name span.status {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  position: relative;
+  top: 1.5px;
+  margin-right: 13px;
+}
+
+#contacts div.contact p.name span.status.active {
+  background-color: #00ff1e;
+}
+
+#contacts div.contact p.name span.status.busy {
+  background-color: #ff0000;
+}
+
+#contacts div.contact p.name span.status.idle {
+  background-color: #fffc00;
+}
+
+#contacts div.contact div.contact-info {
+  width: 168px;
+  color: #565656;
+}
+
+#contacts div.contact p.name, #contacts div.contact div.contact-info {
+  float: left;
+}
+
+#contacts div.contact div.contact-info p.phone,  #contacts div.contact div.contact-info p.address {
+  display: none;
+}
+
+#contact-type {
+  padding: 14px;
+  text-align: right;
+  line-height: 0;
+  background-color: rgba(44, 44, 44, 0.5);
+  box-shadow: 0 -5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+#contact-type select{
+  border: none;
+}
