@@ -80,7 +80,7 @@
   float: left;
 }
 
-#contacts div.contact div.contact-info p.phone,  #contacts div.contact div.contact-info p.address {
+.hidden {
   display: none;
 }
 
