@@ -79,13 +79,6 @@
   background-color: #fffc00;
 }
 
-#contacts div.contact div.contact-info, #contacts div.contact div.contact-info a:link, #contacts div.contact div.contact-info a:visited {
-  width: 168px;
-  color: #565656;
-  line-height: 15px;
-  text-decoration: none;
-}
-
 #contacts div.contact div.contact-info p {
   margin: 0;
   margin: 10px 16px;
@@ -104,6 +97,22 @@
   background-color: #484848;
 }
 
+#contacts div.contact div.contact-info, #contacts div.contact div.contact-info p.email a:link, #contacts div.contact div.contact-info p.email a:visited {
+  width: 168px;
+  color: #565656;
+  line-height: 15px;
+  text-decoration: none;
+}
+
+#contacts div.contact:hover div.contact-info p.email a:link, #contacts div.contact:hover div.contact-info p.email a:visited {
+  color: #00f6ff;
+  text-decoration: underline;
+}
+
+#contacts div.contact div.contact-info p.phone, #contacts div.contact div.contact-info p.address {
+  display: none;
+}
+
 #contacts div.contact:hover div.contact-info {
   position: absolute;
   z-index: 200;
@@ -112,13 +121,8 @@
   color: #fff;
 }
 
-#contacts div.contact:hover div.contact-info p.email a:link, #contacts div.contact:hover div.contact-info p.email a:visited {
-  color: #00f6ff;
-  text-decoration: underline;
-}
-
 #contacts div.contact:hover div.contact-info p {
-  display: block;
+  display: block !important;
 }
 
 #contacts div.overlay {
@@ -134,10 +138,6 @@
 
 #contacts div.contact:hover ~ div.overlay {
   visibility: visible;
-}
-
-.hidden {
-  display: none;
 }
 
 #contact-type {
