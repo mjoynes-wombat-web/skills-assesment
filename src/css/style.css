@@ -13,7 +13,6 @@
   width: 278px;
   background-color: #131313;
   border-radius: 9px;
-  overflow: hidden;
 }
 
 #contacts h1 {
@@ -22,23 +21,32 @@
   padding: 18px;
   margin: 0;
   background: linear-gradient(#3e3e3e, #252525 );
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+#contacts > div > div {
+  position: relative;
 }
 
 #contacts div.contact {
-  margin: 2px 0;
+  position: relative;
+  height: 35px;
+  border-top: 1px solid #131313;
+  border-bottom: 1px solid #131313;
 }
 
-#contacts div.contact:nth-child(even) {
+#contacts div.contact:nth-child(odd) > * {
   background-color: rgba(33, 33, 33, 1);
-  overflow: auto;
+  overflow: visible;
 }
 
-#contacts div.contact:nth-child(odd) {
+#contacts div.contact:nth-child(even) > * {
   background-color: rgba(33, 33, 33, 0.5);
-  overflow: auto;
+  overflow: visible;
 }
 
-#contacts div.contact p {
+#contacts div.contact p.name {
   margin: 0;
   padding: 10px 16px;
   font-size: 12px;
@@ -71,13 +79,61 @@
   background-color: #fffc00;
 }
 
-#contacts div.contact div.contact-info {
+#contacts div.contact div.contact-info, #contacts div.contact div.contact-info a:link, #contacts div.contact div.contact-info a:visited {
   width: 168px;
   color: #565656;
+  line-height: 15px;
+  text-decoration: none;
+}
+
+#contacts div.contact div.contact-info p {
+  margin: 0;
+  margin: 10px 16px;
+  font-size: 12px;
 }
 
 #contacts div.contact p.name, #contacts div.contact div.contact-info {
   float: left;
+}
+
+#contacts div.contact:hover p.name {
+  position: absolute;
+  z-index: 200;
+  width: 79px;
+  border: none;
+  background-color: #484848;
+}
+
+#contacts div.contact:hover div.contact-info {
+  position: absolute;
+  z-index: 200;
+  right: 0;
+  background-color: #484848;
+  color: #fff;
+}
+
+#contacts div.contact:hover div.contact-info p.email a:link, #contacts div.contact:hover div.contact-info p.email a:visited {
+  color: #00f6ff;
+  text-decoration: underline;
+}
+
+#contacts div.contact:hover div.contact-info p {
+  display: block;
+}
+
+#contacts div.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  pointer-events: none;
+  visibility: hidden;
+  top: 0;
+}
+
+#contacts div.contact:hover ~ div.overlay {
+  visibility: visible;
 }
 
 .hidden {
@@ -90,6 +146,8 @@
   line-height: 0;
   background-color: rgba(44, 44, 44, 0.5);
   box-shadow: 0 -5px 5px 0 rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
 }
 
 #contact-type select{
